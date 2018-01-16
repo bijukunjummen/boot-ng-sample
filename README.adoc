@@ -7,9 +7,10 @@ as described http://www.java-allandsundry.com/2016/11/single-page-application-wi
 
 [source, java]
 ----
-spring init --dependencies=web spring-boot-angular2-static-sample
-cd spring-boot-angular2-static-sample
+spring init --dependencies=web boot-ng-sample
+cd boot-ng-sample
 ng init
+
 ----
 
 Edit `.angular-cli.json` and modify outDir to `src/main/resources/static/`
