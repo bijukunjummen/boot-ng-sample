@@ -1,0 +1,50 @@
+# Spring Boot with Angular2
+
+This is a recipe for using https://projects.spring.io/spring-boot/[Spring Boot] with https://angular.io/[Angular 2]
+as described http://www.java-allandsundry.com/2016/11/single-page-application-with-spring.html[here]
+
+# Steps to recreate the project
+
+[source, java]
+----
+spring init --dependencies=web spring-boot-angular2-static-sample
+cd spring-boot-angular2-static-sample
+ng init
+----
+
+Edit `.angular-cli.json` and modify outDir to `src/main/resources/static/`
+
+That is it, build angular 2 content:
+[source, java]
+----
+ng build
+----
+
+Start up UI:
+
+[source, java]
+----
+mvn spring-boot:run
+----
+
+
+# Additional Steps
+
+Proxy the backend by creating a proxy.conf.json file with entries:
+[source, java]
+----
+{
+  "/api": {
+    "target": "http://localhost:8080",
+    "secure": false
+  }
+}
+----
+
+and start up UI part of the app using:
+
+[source]
+----
+ng serve --proxy-config proxy.conf.json
+----
+

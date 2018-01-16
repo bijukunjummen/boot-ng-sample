@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-xs-12">
+        <table class="table table-bordered table-striped">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Zip</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let hotel of hotels; let e = even;">
+                <td>{{hotel.id}}</td>
+                <td>{{hotel.name}}</td>
+                <td>{{hotel.address}}</td>
+                <td>{{hotel.zip}}</td>
+                <td><a [routerLink]="['/edit', hotel.id]">Edit</a> </td>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <a [routerLink]="['/create']">New Hotel</a>
+    </div>
+</div>
