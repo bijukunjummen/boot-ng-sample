@@ -25,7 +25,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_hotels_hotel_component__ = __webpack_require__("../../../../../src/app/components/hotels/hotel.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_app_app_component__ = __webpack_require__("../../../../../src/app/components/app/app.component.ts");
@@ -70,7 +70,7 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* ReactiveFormsModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_http__["c" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(appRoutes)
             ],
             providers: [{ provide: __WEBPACK_IMPORTED_MODULE_9__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_9__angular_common__["d" /* HashLocationStrategy */] }],
@@ -326,11 +326,9 @@ var HotelEditComponent = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export Hotel */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HotelService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -342,44 +340,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var Hotel = /** @class */ (function () {
-    function Hotel() {
-    }
-    return Hotel;
-}());
-
 var HotelService = /** @class */ (function () {
     function HotelService(http) {
         this.http = http;
     }
     HotelService.prototype.getHotels = function () {
-        return this.http.get("/rest/hotels")
-            .map(function (res) { return res.json(); });
+        return this.http.get("/rest/hotels");
     };
     HotelService.prototype.createHotel = function (hotel) {
         var bodyString = JSON.stringify(hotel);
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
         console.log("Creating Hotel : " + bodyString);
-        return this.http.post("/rest/hotels", bodyString, requestOptions)
-            .map(function (res) { return res.json(); });
+        return this.http.post("/rest/hotels", bodyString, { headers: headers });
     };
     HotelService.prototype.updateHotel = function (hotel) {
         var bodyString = JSON.stringify(hotel);
-        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
-        var requestOptions = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["d" /* RequestOptions */]({ headers: headers });
+        var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
         console.log("Updating Hotel : " + bodyString);
-        return this.http.put("/rest/hotels/" + hotel.id, bodyString, requestOptions)
-            .map(function (res) { return res.json(); });
+        return this.http.put("/rest/hotels/" + hotel.id, bodyString, { headers: headers });
     };
     HotelService.prototype.getHotel = function (id) {
-        return this.http.get("/rest/hotels/" + id)
-            .map(function (res) { return res.json(); });
+        return this.http.get("/rest/hotels/" + id);
     };
     HotelService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */]])
     ], HotelService);
     return HotelService;
 }());

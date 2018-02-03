@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {HotelService, Hotel} from '../../services/hotel.service'
+import {HotelService} from '../../services/hotel.service'
+import {Hotel} from '../../services/hotel'
 
 @Component({
   selector: 'hotels',

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {HotelService, Hotel} from '../../services/hotel.service'
+import {HotelService} from '../../services/hotel.service'
+import {Hotel} from '../../services/hotel'
 import {Router} from '@angular/router'
 import {FormGroup, FormBuilder, Validators} from "@angular/forms";
 

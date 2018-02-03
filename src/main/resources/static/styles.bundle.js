@@ -479,8 +479,8 @@ function updateLink(linkElement, obj) {
 /***/ 2:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__("../../../../../src/styles.css");
-module.exports = __webpack_require__("../../../../bootstrap/dist/css/bootstrap.css");
+__webpack_require__("../../../../bootstrap/dist/css/bootstrap.css");
+module.exports = __webpack_require__("../../../../../src/styles.css");
 
 
 /***/ })
