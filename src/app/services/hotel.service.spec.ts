@@ -1,6 +1,7 @@
 import {TestBed} from '@angular/core/testing';
 
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing'
+import {Hotel} from "./hotel"
 import {HotelService} from './hotel.service'
 
 
@@ -49,8 +50,17 @@ describe("Hotel Service", () => {
   });
 
   it("should create a hotel on POST with details", (done) => {
-    let hotel = {"name": "test name", "address": "test address", "zip": "zip"}
-    hotelService.createHotel()
+    let hotel: Hotel = {id: null, name: "test hotel", address: "test address", zip: "test zip"};
+
+    hotelService
+      .createHotel(hotel)
+      .subscribe((res) => {
+        expect(res).toEqual({"id": "1", "name": "test name", "address": "test address", "zip": "zip", "version": "1"});
+        done();          
+      });
+
+    let hotelRequestById = httpMock.expectOne("/rest/hotels")
+    hotelRequestById.flush({"id": "1", "name": "test name", "address": "test address", "zip": "zip", "version": "1"});
   });
 
 

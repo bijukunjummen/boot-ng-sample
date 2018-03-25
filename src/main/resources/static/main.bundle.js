@@ -1,6 +1,6 @@
 webpackJsonp(["main"],{
 
-/***/ "../../../../../src/$$_lazy_route_resource lazy recursive":
+/***/ "./src/$$_lazy_route_resource lazy recursive":
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,25 +13,48 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy recursive";
+webpackEmptyAsyncContext.id = "./src/$$_lazy_route_resource lazy recursive";
 
 /***/ }),
 
-/***/ "../../../../../src/app/app.module.ts":
+/***/ "./src/app/app-routes.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return appRoutes; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_hotels_hotel_component__ = __webpack_require__("./src/app/components/hotels/hotel.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_hotels_hotel_create_component__ = __webpack_require__("./src/app/components/hotels/hotel.create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_hotels_hotel_edit_component__ = __webpack_require__("./src/app/components/hotels/hotel.edit.component.ts");
+
+
+
+var appRoutes = [
+    { path: 'list', component: __WEBPACK_IMPORTED_MODULE_0__components_hotels_hotel_component__["a" /* HotelComponent */] },
+    { path: 'edit/:id', component: __WEBPACK_IMPORTED_MODULE_2__components_hotels_hotel_edit_component__["a" /* HotelEditComponent */] },
+    { path: 'create', component: __WEBPACK_IMPORTED_MODULE_1__components_hotels_hotel_create_component__["a" /* HotelCreateComponent */] },
+    { path: '', component: __WEBPACK_IMPORTED_MODULE_0__components_hotels_hotel_component__["a" /* HotelComponent */] },
+    { path: '*', component: __WEBPACK_IMPORTED_MODULE_0__components_hotels_hotel_component__["a" /* HotelComponent */] },
+];
+
+
+/***/ }),
+
+/***/ "./src/app/app.module.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__components_hotels_hotel_component__ = __webpack_require__("../../../../../src/app/components/hotels/hotel.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_app_app_component__ = __webpack_require__("../../../../../src/app/components/app/app.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_hotels_hotel_create_component__ = __webpack_require__("../../../../../src/app/components/hotels/hotel.create.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_hotels_hotel_edit_component__ = __webpack_require__("../../../../../src/app/components/hotels/hotel.edit.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__("./node_modules/@angular/platform-browser/esm5/platform-browser.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__app_routes__ = __webpack_require__("./src/app/app-routes.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__components_hotels_hotel_component__ = __webpack_require__("./src/app/components/hotels/hotel.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_app_app_component__ = __webpack_require__("./src/app/components/app/app.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_hotels_hotel_create_component__ = __webpack_require__("./src/app/components/hotels/hotel.create.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_hotels_hotel_edit_component__ = __webpack_require__("./src/app/components/hotels/hotel.edit.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__angular_common__ = __webpack_require__("./node_modules/@angular/common/esm5/common.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -48,33 +71,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var appRoutes = [
-    { path: 'list', component: __WEBPACK_IMPORTED_MODULE_5__components_hotels_hotel_component__["a" /* HotelComponent */] },
-    { path: 'edit/:id', component: __WEBPACK_IMPORTED_MODULE_8__components_hotels_hotel_edit_component__["a" /* HotelEditComponent */] },
-    { path: 'create', component: __WEBPACK_IMPORTED_MODULE_7__components_hotels_hotel_create_component__["a" /* HotelCreateComponent */] },
-    { path: '', component: __WEBPACK_IMPORTED_MODULE_5__components_hotels_hotel_component__["a" /* HotelComponent */] },
-    { path: '*', component: __WEBPACK_IMPORTED_MODULE_5__components_hotels_hotel_component__["a" /* HotelComponent */] },
-];
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["I" /* NgModule */])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_5__components_hotels_hotel_component__["a" /* HotelComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__components_hotels_hotel_create_component__["a" /* HotelCreateComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__components_hotels_hotel_edit_component__["a" /* HotelEditComponent */],
-                __WEBPACK_IMPORTED_MODULE_6__components_app_app_component__["a" /* AppComponent */]
+                __WEBPACK_IMPORTED_MODULE_6__components_hotels_hotel_component__["a" /* HotelComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__components_hotels_hotel_create_component__["a" /* HotelCreateComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__components_hotels_hotel_edit_component__["a" /* HotelEditComponent */],
+                __WEBPACK_IMPORTED_MODULE_7__components_app_app_component__["a" /* AppComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["b" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* ReactiveFormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(appRoutes)
+                __WEBPACK_IMPORTED_MODULE_4__angular_router__["c" /* RouterModule */].forRoot(__WEBPACK_IMPORTED_MODULE_5__app_routes__["a" /* appRoutes */])
             ],
-            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_9__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_9__angular_common__["d" /* HashLocationStrategy */] }],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_6__components_app_app_component__["a" /* AppComponent */]]
+            providers: [{ provide: __WEBPACK_IMPORTED_MODULE_10__angular_common__["g" /* LocationStrategy */], useClass: __WEBPACK_IMPORTED_MODULE_10__angular_common__["d" /* HashLocationStrategy */] }],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_7__components_app_app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
     return AppModule;
@@ -84,19 +101,19 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/app/app.component.html":
+/***/ "./src/app/components/app/app.component.html":
 /***/ (function(module, exports) {
 
 module.exports = "<router-outlet></router-outlet>"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/app/app.component.ts":
+/***/ "./src/app/components/app/app.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -110,7 +127,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-root',
-            template: __webpack_require__("../../../../../src/app/components/app/app.component.html"),
+            template: __webpack_require__("./src/app/components/app/app.component.html"),
             providers: []
         })
     ], AppComponent);
@@ -121,20 +138,20 @@ var AppComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/hotels/hotel.component.html":
+/***/ "./src/app/components/hotels/hotel.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-xs-12\">\n        <table class=\"table table-bordered table-striped\">\n            <thead>\n            <tr>\n                <th>ID</th>\n                <th>Name</th>\n                <th>Address</th>\n                <th>Zip</th>\n                <th>Action</th>\n            </tr>\n            </thead>\n            <tbody>\n            <tr *ngFor=\"let hotel of hotels; let e = even;\">\n                <td>{{hotel.id}}</td>\n                <td>{{hotel.name}}</td>\n                <td>{{hotel.address}}</td>\n                <td>{{hotel.zip}}</td>\n                <td><a [routerLink]=\"['/edit', hotel.id]\">Edit</a> </td>\n            </tbody>\n        </table>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-xs-12\">\n        <a [routerLink]=\"['/create']\">New Hotel</a>\n    </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12\">\n        <table class=\"table table-bordered table-striped\">\n            <thead>\n            <tr>\n                <th>ID</th>\n                <th>Name</th>\n                <th>Address</th>\n                <th>Zip</th>\n                <th>Action</th>\n            </tr>\n            </thead>\n            <tbody>\n            <tr *ngFor=\"let hotel of hotels; let e = even;\">\n                <td>{{hotel.id}}</td>\n                <td>{{hotel.name}}</td>\n                <td>{{hotel.address}}</td>\n                <td>{{hotel.zip}}</td>\n                <td><a [routerLink]=\"['/edit', hotel.id]\">Edit</a> </td>\n            </tbody>\n        </table>\n    </div>\n</div>\n<div class=\"row\">\n    <div class=\"col-sm-12\">\n        <a [routerLink]=\"['/create']\">New Hotel</a>\n    </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/hotels/hotel.component.ts":
+/***/ "./src/app/components/hotels/hotel.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HotelComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_hotel_service__ = __webpack_require__("../../../../../src/app/services/hotel.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_hotel_service__ = __webpack_require__("./src/app/services/hotel.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -160,7 +177,7 @@ var HotelComponent = /** @class */ (function () {
     HotelComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'hotels',
-            template: __webpack_require__("../../../../../src/app/components/hotels/hotel.component.html"),
+            template: __webpack_require__("./src/app/components/hotels/hotel.component.html"),
             // styleUrls: ['./hotel.component.css'],
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_hotel_service__["a" /* HotelService */]]
         }),
@@ -173,22 +190,22 @@ var HotelComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/hotels/hotel.create.component.html":
+/***/ "./src/app/components/hotels/hotel.create.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-xs-12\">\n        <form [formGroup]=\"hotelModel\" class=\"form-horizontal\" (ngSubmit)=\"createHotel(hotelModel.value)\">\n\n              <div class=\"form-group\">\n                <label for=\"name\" class=\"col-xs-2\">Name</label>\n                <div class=\"col-xs-6\">\n                    <input class=\"form-control\" placeholder=\"Name\" formControlName=\"name\"/>\n                    <span [hidden]=\"!hotelModel.hasError('required', 'name')\">Name is required..</span>\n                    <span [hidden]=\"!hotelModel.hasError('minlength', 'name')\">At least 2 characters in length</span>\n                </div>\n              </div>\n\n                <div class=\"form-group\">\n                    <label for=\"address\" class=\"col-xs-2\">Address</label>\n                    <div class=\"col-xs-6\">\n                        <input class=\"form-control\" placeholder=\"Address\" formControlName=\"address\"/>\n                        <span [hidden]=\"!hotelModel.hasError('required', 'address')\">Address is Required..</span>\n                    </div>\n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"zip\" class=\"col-xs-2\">Zip</label>\n\n                    <div class=\"col-xs-6\">\n                        <input class=\"form-control\" placeholder=\"Zip\" formControlName=\"zip\"/>\n                       <span [hidden]=\"!hotelModel.hasError('required', 'zip')\">Zip is required..</span>\n                    </div>\n                </div>\n            \n\n            <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\"/>\n            <a [routerLink]=\"['/list']\">List Hotels</a>\n        </form>\n    </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12\">\n        <form [formGroup]=\"hotelModel\" class=\"form-horizontal\" (ngSubmit)=\"createHotel(hotelModel.value)\">\n\n              <div class=\"form-group\">\n                <label for=\"name\" class=\"col-sm-2\">Name</label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\" placeholder=\"Name\" formControlName=\"name\"/>\n                    <span [hidden]=\"!hotelModel.hasError('required', 'name')\">Name is required..</span>\n                    <span [hidden]=\"!hotelModel.hasError('minlength', 'name')\">At least 2 characters in length</span>\n                </div>\n              </div>\n\n                <div class=\"form-group\">\n                    <label for=\"address\" class=\"col-sm-2\">Address</label>\n                    <div class=\"col-sm-6\">\n                        <input class=\"form-control\" placeholder=\"Address\" formControlName=\"address\"/>\n                        <span [hidden]=\"!hotelModel.hasError('required', 'address')\">Address is Required..</span>\n                    </div>\n                </div>\n\n                <div class=\"form-group\">\n                    <label for=\"zip\" class=\"col-sm-2\">Zip</label>\n\n                    <div class=\"col-sm-6\">\n                        <input class=\"form-control\" placeholder=\"Zip\" formControlName=\"zip\"/>\n                       <span [hidden]=\"!hotelModel.hasError('required', 'zip')\">Zip is required..</span>\n                    </div>\n                </div>\n            \n\n            <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\"/>\n            <a [routerLink]=\"['/list']\">List Hotels</a>\n        </form>\n    </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/hotels/hotel.create.component.ts":
+/***/ "./src/app/components/hotels/hotel.create.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HotelCreateComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_hotel_service__ = __webpack_require__("../../../../../src/app/services/hotel.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_hotel_service__ = __webpack_require__("./src/app/services/hotel.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -224,7 +241,7 @@ var HotelCreateComponent = /** @class */ (function () {
     HotelCreateComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'create-hotel',
-            template: __webpack_require__("../../../../../src/app/components/hotels/hotel.create.component.html"),
+            template: __webpack_require__("./src/app/components/hotels/hotel.create.component.html"),
             // styleUrls: ['./hotel.component.css'],
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_hotel_service__["a" /* HotelService */]]
         }),
@@ -237,22 +254,22 @@ var HotelCreateComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/hotels/hotel.edit.component.html":
+/***/ "./src/app/components/hotels/hotel.edit.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n    <div class=\"col-xs-12\">\n        <form [formGroup]=\"hotelModel\" class=\"form-horizontal\" (ngSubmit)=\"updateHotel(hotelModel)\">\n          <input type=\"hidden\" formControlName=\"id\"/>\n          <input type=\"hidden\" formControlName=\"version\"/>\n            <div class=\"form-group\">\n                <label for=\"name\" class=\"col-xs-2\">Name</label>\n                <div class=\"col-xs-6\">\n                    <input class=\"form-control\" placeholder=\"Name\" formControlName=\"name\"/>\n                    <span [hidden]=\"!hotelModel.hasError('required', 'name')\">Name is required..</span>\n                    <span [hidden]=\"!hotelModel.hasError('minlength', 'name')\">At least 2 characters in length</span>\n                </div>\n              </div>\n                <div class=\"form-group\">\n                    <label for=\"address\" class=\"col-xs-2\">Address</label>\n                    <div class=\"col-xs-6\">\n                        <input class=\"form-control\" placeholder=\"Address\" formControlName=\"address\"/>\n                        <span [hidden]=\"!hotelModel.hasError('required', 'address')\">Address is Required..</span>\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"zip\" class=\"col-xs-2\">Zip</label>\n\n                    <div class=\"col-xs-6\">\n                        <input class=\"form-control\" placeholder=\"Zip\" formControlName=\"zip\"/>\n                       <span [hidden]=\"!hotelModel.hasError('required', 'zip')\">Zip is required..</span>\n                    </div>\n                </div>\n            <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\"/>\n            <a [routerLink]=\"['/list']\">List Hotels</a>\n        </form>\n    </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n    <div class=\"col-sm-12\">\n        <form [formGroup]=\"hotelModel\" class=\"form-horizontal\" (ngSubmit)=\"updateHotel(hotelModel)\">\n          <input type=\"hidden\" formControlName=\"id\"/>\n          <input type=\"hidden\" formControlName=\"version\"/>\n            <div class=\"form-group\">\n                <label for=\"name\" class=\"col-sm-2\">Name</label>\n                <div class=\"col-sm-6\">\n                    <input class=\"form-control\" placeholder=\"Name\" formControlName=\"name\"/>\n                    <span [hidden]=\"!hotelModel.hasError('required', 'name')\">Name is required..</span>\n                    <span [hidden]=\"!hotelModel.hasError('minlength', 'name')\">At least 2 characters in length</span>\n                </div>\n              </div>\n                <div class=\"form-group\">\n                    <label for=\"address\" class=\"col-sm-2\">Address</label>\n                    <div class=\"col-sm-6\">\n                        <input class=\"form-control\" placeholder=\"Address\" formControlName=\"address\"/>\n                        <span [hidden]=\"!hotelModel.hasError('required', 'address')\">Address is Required..</span>\n                    </div>\n                </div>\n                <div class=\"form-group\">\n                    <label for=\"zip\" class=\"col-sm-2\">Zip</label>\n\n                    <div class=\"col-sm-6\">\n                        <input class=\"form-control\" placeholder=\"Zip\" formControlName=\"zip\"/>\n                       <span [hidden]=\"!hotelModel.hasError('required', 'zip')\">Zip is required..</span>\n                    </div>\n                </div>\n            <input type=\"submit\" class=\"btn btn-primary\" value=\"Submit\"/>\n            <a [routerLink]=\"['/list']\">List Hotels</a>\n        </form>\n    </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "../../../../../src/app/components/hotels/hotel.edit.component.ts":
+/***/ "./src/app/components/hotels/hotel.edit.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HotelEditComponent; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_hotel_service__ = __webpack_require__("../../../../../src/app/services/hotel.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_forms__ = __webpack_require__("./node_modules/@angular/forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_hotel_service__ = __webpack_require__("./src/app/services/hotel.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__("./node_modules/@angular/router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -306,7 +323,7 @@ var HotelEditComponent = /** @class */ (function () {
     HotelEditComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_3__angular_core__["n" /* Component */])({
             selector: 'edit-hotel',
-            template: __webpack_require__("../../../../../src/app/components/hotels/hotel.edit.component.html"),
+            template: __webpack_require__("./src/app/components/hotels/hotel.edit.component.html"),
             // styleUrls: ['./hotel.component.css'],
             providers: [__WEBPACK_IMPORTED_MODULE_1__services_hotel_service__["a" /* HotelService */]]
         }),
@@ -322,13 +339,13 @@ var HotelEditComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/app/services/hotel.service.ts":
+/***/ "./src/app/services/hotel.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HotelService; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("./node_modules/@angular/common/esm5/http.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -373,7 +390,7 @@ var HotelService = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "../../../../../src/environments/environment.ts":
+/***/ "./src/environments/environment.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -389,15 +406,15 @@ var environment = {
 
 /***/ }),
 
-/***/ "../../../../../src/main.ts":
+/***/ "./src/main.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("../../../platform-browser-dynamic/esm5/platform-browser-dynamic.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("../../../../../src/app/app.module.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("../../../../../src/environments/environment.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("./node_modules/@angular/core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__ = __webpack_require__("./node_modules/@angular/platform-browser-dynamic/esm5/platform-browser-dynamic.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__app_app_module__ = __webpack_require__("./src/app/app.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environments_environment__ = __webpack_require__("./src/environments/environment.ts");
 
 
 
@@ -414,7 +431,7 @@ Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* pl
 /***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("../../../../../src/main.ts");
+module.exports = __webpack_require__("./src/main.ts");
 
 
 /***/ })

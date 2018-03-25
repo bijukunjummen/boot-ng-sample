@@ -3,5 +3,5 @@ export class Hotel {
     name: string
     address: string
     zip: string
-    version: string
+    version?: string
   }
